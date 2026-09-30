@@ -3,7 +3,7 @@
 
   // Header background on scroll + TOP button
   var header = document.getElementById("header");
-  var topBtn = document.querySelector(".quick__btn--top");
+  var topBtn = document.querySelector(".to-top");
   function onScroll() {
     var y = window.scrollY;
     header.classList.toggle("is-scrolled", y > 40);
@@ -32,6 +32,7 @@
   // Hero slider
   var slides = document.querySelectorAll(".hero__slide");
   var dots = document.querySelectorAll("#heroDots button");
+  var heroLabel = document.getElementById("heroLabel");
   var current = 0;
   var timer;
   function goTo(i) {
@@ -40,6 +41,7 @@
     current = (i + slides.length) % slides.length;
     slides[current].classList.add("is-active");
     dots[current].classList.add("is-active");
+    heroLabel.textContent = slides[current].dataset.label || "";
   }
   function autoplay() {
     clearInterval(timer);
