@@ -556,7 +556,7 @@ i { font-style: normal; }
 .panel__en { font-family: var(--serif-en); font-style: italic; font-size: 1.3rem; color: var(--bronze); letter-spacing: .06em; margin-bottom: 4px; }
 
 /* ---------- Director photo ---------- */
-.director__photo img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+.director__photo img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
 
 @media (max-width: 600px) {
   .tab { padding: 12px 14px; font-size: .82rem; }
