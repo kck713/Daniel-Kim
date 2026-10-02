@@ -310,23 +310,33 @@ i { font-style: normal; }
 .review p { color: var(--ink-soft); font-size: .95rem; flex: 1; }
 .review cite { font-style: normal; font-size: .82rem; font-weight: 700; color: var(--ink); }
 
-/* ---------- Price ---------- */
+/* ---------- Price (menu) ---------- */
 .price { background: var(--linen); }
-.price__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
-.price__card { position: relative; padding: 44px 36px; background: var(--paper); }
-.price__card h3 { font-family: var(--serif-en); font-size: 1.5rem; font-weight: 600; letter-spacing: .15em; text-align: center; margin-bottom: 28px; }
-.price__card ul { list-style: none; padding: 0; margin: 0; }
-.price__card li { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
-.price__card li b { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.price__card--point { background: var(--espresso); color: var(--white); }
-.price__card--point h3 { color: var(--sand); }
-.price__card--point li { border-color: var(--line-dark); }
-.price__card--point li b { color: var(--sand); }
-.price__tag {
-  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-  background: var(--sand); color: var(--espresso); font-size: .7rem; font-weight: 700; letter-spacing: .2em;
-  padding: 4px 16px;
-}
+.menu { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.menu__card { padding: clamp(32px, 4vw, 48px); background: var(--paper); }
+.menu__card--dark { background: var(--espresso); color: var(--white); }
+.menu__cat { font-family: var(--serif-en); font-size: 1.05rem; font-weight: 600; letter-spacing: .22em; color: var(--bronze); margin-bottom: 8px; }
+.menu__cat small { font-family: var(--sans); font-size: .78rem; font-weight: 500; letter-spacing: 0; margin-left: 8px; color: var(--ink-soft); }
+.menu__card--dark .menu__cat { color: var(--sand); }
+.menu__card--dark .menu__cat small { color: rgba(255,255,255,.55); }
+.menu__list + .menu__cat { margin-top: 36px; }
+.menu__list { list-style: none; padding: 0; margin: 0; }
+.menu__list li { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 20px 0; border-bottom: 1px dashed var(--line); }
+.menu__card--dark .menu__list li { border-color: var(--line-dark); }
+.menu__list li > div:first-child { min-width: 0; }
+.menu__list b { display: block; font-family: var(--serif-en); font-size: 1.35rem; font-weight: 600; line-height: 1.3; }
+.menu__list span { display: block; font-size: .84rem; color: var(--ink-soft); margin-top: 2px; }
+.menu__card--dark .menu__list span { color: rgba(255,255,255,.6); }
+.menu__price { text-align: right; flex-shrink: 0; }
+.menu__price b { font-family: var(--sans); font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.menu__price b small { font-size: .72rem; font-weight: 500; margin-left: 2px; }
+.menu__card--dark .menu__price b { color: var(--sand); }
+.menu__price span { font-size: .74rem; color: var(--rose); }
+.menu__card--dark .menu__price span { color: var(--sand-light); opacity: .75; }
+.menu__price .menu__ask { font-size: .9rem; color: var(--bronze); }
+.menu__note { margin-top: 24px; padding: 22px 24px; border: 1px solid var(--line); background: var(--paper); text-align: center; font-size: .9rem; color: var(--ink-soft); }
+.menu__note p { margin: 0; }
+.menu__note b { color: var(--ink); }
 
 /* ---------- FAQ ---------- */
 .faq { background: var(--paper); }
@@ -456,8 +466,8 @@ i { font-style: normal; }
   .nav.is-open { opacity: 1; visibility: visible; }
   .nav__cta { display: inline-block; margin-top: 8px; padding: 12px 28px; background: var(--sand); color: var(--espresso); font-family: var(--sans); font-weight: 700; font-size: .95rem; }
   .panel, .reserve__inner, .location__inner { grid-template-columns: 1fr; }
-  .ba-grid, .price__grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
-  .price__card--point { order: -1; }
+  .ba-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+  .menu { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
 }
 
 @media (max-width: 600px) {
