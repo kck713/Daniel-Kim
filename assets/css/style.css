@@ -499,7 +499,7 @@ i { font-style: normal; }
 }
 
 /* ---------- Director ---------- */
-.director__inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+.director__inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
 .director__photo .ph { max-width: 100%; }
 .director__name { font-size: clamp(2.2rem, 4.4vw, 3.4rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.2; margin-bottom: 10px; }
 .director__name small { font-size: .5em; font-weight: 500; color: var(--sand); margin-left: 6px; }
@@ -513,7 +513,7 @@ i { font-style: normal; }
 .director__career li::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: var(--sand); }
 @media (max-width: 960px) {
   .director__inner { grid-template-columns: 1fr; }
-  .director__photo { max-width: 560px; }
+  .director__photo { max-width: 420px; }
 }
 
 /* ---------- Hero photo ---------- */
