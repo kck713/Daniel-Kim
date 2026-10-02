@@ -541,3 +541,16 @@ i { font-style: normal; }
   .story__keys > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 26px; }
   .story__keys > div:first-child { padding-right: 0; }
 }
+
+/* ---------- Bilingual treatment labels ---------- */
+.tab { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.3; padding: 14px 34px; }
+.tab__en { font-family: var(--serif-en); font-size: 1.15rem; font-weight: 600; letter-spacing: .14em; }
+.panel__en { font-family: var(--serif-en); font-style: italic; font-size: 1.3rem; color: var(--bronze); letter-spacing: .06em; margin-bottom: 4px; }
+
+/* ---------- Director photo ---------- */
+.director__photo img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+
+@media (max-width: 600px) {
+  .tab { padding: 12px 14px; font-size: .82rem; }
+  .tab__en { font-size: .92rem; letter-spacing: .08em; }
+}
