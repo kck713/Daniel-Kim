@@ -41,16 +41,18 @@
     current = (i + slides.length) % slides.length;
     slides[current].classList.add("is-active");
     dots[current].classList.add("is-active");
-    heroLabel.textContent = slides[current].dataset.label || "";
+    if (heroLabel) heroLabel.textContent = slides[current].dataset.label || "";
   }
   function autoplay() {
     clearInterval(timer);
     timer = setInterval(function () { goTo(current + 1); }, 5000);
   }
-  dots.forEach(function (dot, i) {
-    dot.addEventListener("click", function () { goTo(i); autoplay(); });
-  });
-  autoplay();
+  if (slides.length > 1 && dots.length === slides.length) {
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () { goTo(i); autoplay(); });
+    });
+    autoplay();
+  }
 
   // Service tabs
   var tabs = document.querySelectorAll(".tab");
