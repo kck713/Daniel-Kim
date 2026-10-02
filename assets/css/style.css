@@ -525,3 +525,21 @@ i { font-style: normal; }
 @media (max-height: 640px) and (min-width: 601px) {
   .hero { min-height: 640px; }
 }
+
+/* ---------- Director ---------- */
+.director__inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+.director__photo .ph { max-width: 100%; }
+.director__name { font-size: clamp(2.2rem, 4.4vw, 3.4rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.2; margin-bottom: 10px; }
+.director__name small { font-size: .5em; font-weight: 500; color: var(--sand); margin-left: 6px; }
+.director__role { color: rgba(255,255,255,.62); font-size: .92rem; letter-spacing: .02em; }
+.director__quote {
+  margin: 28px 0; padding-left: 20px; border-left: 2px solid var(--sand);
+  font-family: var(--serif-ko); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.8; color: rgba(255,255,255,.88);
+}
+.director__career { list-style: none; padding: 0; margin: 0 0 36px; border-top: 1px solid var(--line-dark); }
+.director__career li { padding: 13px 0 13px 18px; border-bottom: 1px solid var(--line-dark); position: relative; font-size: .94rem; color: rgba(255,255,255,.8); }
+.director__career li::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: var(--sand); }
+@media (max-width: 960px) {
+  .director__inner { grid-template-columns: 1fr; }
+  .director__photo { max-width: 420px; }
+}
